@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>폼 테스트</h1>
+<form action="#" method="post" enctype="multipart/form-data"">
+<fieldset>
+	<legend>폼 입력양식 1</legend>
+	<label for="name">이름</label>
+	<input id="name" type="text" size="50" maxlength="20">
+	<!-- label로 checkbox를 감싸주면 이름을 클릭해도 체크됨 -->
+	<label>체크<input type="checkbox"></label><br>
+	<!-- for 값을 input의 id값으로 지정 -->
+	<lable for="pwd">비밀번호</lable>
+	<input id="pwd" type="password"><br>
+	
+	<!-- hidden을 사용한 로그인 -->
+	<input type="hidden" value="히든을 통한 로그인">
+	<label>히든 아이디: <input type="text" id="user_id" size="10"></label><br>
+	<label>히든 비밀번호: <input type="password" id="user_pw" size="10"></label><br>
+	<input type="submit" value="로그인">
+	
+	이메일<input type="email"><br>
+	하나만 선택 : 하나 <input type="radio" name="num">, 
+			둘 <input type="radio" name="num" checked>, 
+			셋 <input type="radio" name="num"><br>
+	숫자<input type="number" min=1 max=5 step=0.1 value=3>
+	범위<input type="range"><br>
+	날짜<input type="date"><br>
+	시간<input type="time"><br>
+	첨부파일<input type="file"><br>
+	<textarea rows="5" cols="50">
+	</textarea>
+	<select multiple="multiple" size="1">
+		<option value="1">값1
+		<option value="2" selected>값2
+		<option value="3">값3
+		<option value="4">값4
+		<option value="5">값5	
+	</select>
+	<input type="text" list="dlist">
+	<datalist id="dlist">
+		<option>안녕하세요.
+		<option>Hello
+		<option>1234567
+	</datalist>
+	<input type="reset" value="취소">
+	<input type="submit" value="전송">
+	<input type="button" value="버튼1">
+	<!-- <input type="image" src="images/img.png"> -->
+</fieldset>
+</form>
+<form action="#" method="get">
+<fieldset>
+	<legend>폼 입력양식 2</legend>
+	<input type="text">
+</fieldset>
+</form>
+<form action="#" method="get">
+<fieldset>
+	<legend>배송 정보</legend>
+	<ul id="shipping">
+		<li>
+			<label for="prod">주문 상품</label>
+			<input type="text" id="prod" value="상품용 3kg" readonly>
+		</li>
+		<li>
+			<label for="user-name">이름</label>
+			<input type="text" id="user-name" autofocus required>
+		</li>
+		<li>
+			<label for="addr">배송 주소</label>
+			<input type="text" id="addr" required>
+		</li>
+		<li>
+			<label for="mail">이메일</label>
+			<input type="email" id="mail">
+		</li>
+		<li>
+			<label for="phone">연락처</label>
+			<input type="tel" id="phone" placeholder="하이픈 빼고 입력해 주세요.(01012345678)" required>
+		</li>
+		<li>
+			<label for="d-day">배송 지정</label>
+			<input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+		</li>
+	</ul>
+</fieldset>
+<div>
+	<input type="submit" value="주문하기">
+	<input type="reset" value="취소하기">
+</div>
+</form>
+</body>
+</html>
