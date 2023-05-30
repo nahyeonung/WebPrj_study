@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+<!--@font-face 글꼴 설명 -->
+<!--글꼴 이름을 script9로 지정-->
+<!--src 구문은 컴퓨터에 있는 SCIPRT 9라는 이름을 가진 글꼴을 사용하되, 없다면 url로 서버에 있는 해당 글꼴을 찾는다는 구문-->
+<style>
+@font-face{
+	font-family: 'script9';
+	src: local('SCRIPT 9'), 
+		url('fonts/script9.woff') format('woff'),
+		url('fonts/SCRIPT 9.ttf') format('truetype')
+}
+body{
+	color: red;
+	font-family: script9;
+	font-size: 2em;
+}
+h1{
+	font-family: 바탕;
+	font-size: 3em;
+}
+table{
+	border: 1px solid black;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.accent{
+	font-size: 150%;
+	font-weight: 800;
+}
+.italic {
+	font-style: italic;
+}
+</style>
+</head>
+<body>
+<table border=1 cellspacing=0>
+<tr>
+	<td>1</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>3</td>
+	<td>4</td>
+</tr>
+</table>
+<!-- alt + shift + y => 자동 줄바꿈 -->
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<h1>레드향</h1>
+<p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+<p>레드향은 한라봉과 귤을 교배한 것으로</p>
+<p class="italic">일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+</body>
+</html>
