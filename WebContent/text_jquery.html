@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- integrity는 깨짐방지를 위한 것으로 굳이 넣지 않아도 됨(무결성) -->
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<!-- jQuery의 script는 body앞에 와도 무관하다. -->
+<script>
+$(document).ready(
+		function() {
+			$("#red").click(function() {
+				$("#box")
+				.css("background", "red")
+				.css("border", "1px dotted blue")
+				.html("<b>" + $(this).text() + "</b>"); // 참조 체인
+			});
+			$("#blue").click(function(){
+				$("#box").css("background", "blue").css("border", "2px dashed red").text($(this).text());
+			});
+			$("[type=button]").click(function() {
+				let message = $("[type=text]").val();
+				$("[type=text]").val("")
+				$("#box").text(message); //html 태그를 포함시키려면 html()을 사용함
+			})
+		}
+);
+</script>
+</head>
+<body>
+<div id="box"></div>
+<span id="red">RED</span> <span id="blue">BLUE</span><br>
+<input type="text"> <input type="button" value="확인">
+</body>
+</html>

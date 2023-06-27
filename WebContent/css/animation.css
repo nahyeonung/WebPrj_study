@@ -1,0 +1,31 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+#box {
+	position: absolute;
+	width: 200px; height: 200px;
+	border-radius: 100px;
+	text-align: center;
+	background: linear-gradient(0deg, #cb60b3 0%, #FF0000 100%);
+	
+	animation-name: go_and_rotate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+}
+#box > h1 {
+	line-height: 200px;
+}
+@keyframes go_and_rotate{
+	from{
+		left: 0;
+		transform:rotate(0deg);
+	}
+	50% {
+		left: 500px;
+	}
+	to{
+		left: 500px;
+		transform: rotate(360deg);
+	}
+}

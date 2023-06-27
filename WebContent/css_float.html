@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#redbox {background: red;width: 100px; height: 100px; border: 1px solid #00000000; margin: 5px; float: left}
+#greenbox{background: green;width: 100px; height: 100px; border: 1px solid #00000000; margin: 5px; float: left}
+#bluebox{background: blue;width: 100px; height: 100px; border: 1px solid #00000000; margin: 5px; float: left}
+#yellowbox{background: yellow;width: 100px; height: 100px; border: 1px solid #00000000; margin: 5px; float: left}
+#blackbox{background: black;width: 100px; height: 100px; border: 1px solid #00000000; margin: 5px; float: left}
+p {clear: both;}
+#content {width:600px; padding: 10px; border: 2px dashed black}
+/*#content:after { content: " "; display: block; clear: both;}*/ /*아래에서 p태그 대신에 넣을 수 있는 것*/
+img{
+	float: left;
+	margin-right: 40px;
+	width: 200px;
+	height: 200px;
+}
+#box1 {
+	background: #ffd800;
+	float: left; /*왼쪽으로 플로팅*/
+}
+#box2 {
+	background: #0094ff;
+	float: left; /*왼쪽으로 플로팅*/
+}
+#box3 {
+	background: #00ff21;
+}
+#box4 {
+	background: #a874ff;
+	clear: left;
+}
+</style>
+</head>
+<body>
+<section id="content">
+<h1>문서의 내용</h1>
+<div id="redbox"></div>
+<div id="greenbox"></div>
+<div id="bluebox"></div>
+<div id="yellowbox"></div>
+<div id="blackbox"></div>
+<p>after를 이해하시려면 여기를 삭제해 보세요</p>
+</section>
+<img src="images/mainModel.png">
+<p>무이치로의 무는 무한의 무</p>
+<div id="box1">박스1</div>
+<div id="box2">박스2</div>
+<div id="box3">박스3</div>
+<div id="box4">박스4</div>
+</body>
+</html>

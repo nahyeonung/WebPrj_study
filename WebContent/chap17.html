@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>chap17</title>
+<style>
+div {
+   width:200px; height:200px;
+   border:1px solid black;
+   background-color:cyan;
+}
+.mouseover {
+   background-color:blue;
+   border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<h1>DOM SAMPLE</h1>
+<!-- <input type="text"><input type="button" value="입력">
+<div id="result"></div>  -->
+<div id="first"></div>
+<div id="second"></div>
+<script>
+   /*document.querySelector("[type=button]").onclick = function(event){
+      let text = document.querySelector("[type=text]").value;
+      document.querySelector("#result").textContent = text;
+   }
+   var count = 0;
+   document.querySelector("[type=text]").onkeyup = function(event) {
+      document.querySelector("#result").textContent = this.value.length;
+   }*/
+   var secondE1 = document.querySelector("#second");
+   secondE1.onmouseover = function(event){
+      secondE1.setAttribute("class", "mouseover");
+   }
+   secondE1.onmouseout = () => {
+      secondE1.removeAttribute("class");
+   }
+   var firstE1 = document.querySelector("#first");
+   firstE1.onmouseover = function(event){
+      firstE1.style.backgroundColor = "blue";
+      firstE1.style.borderRadius = "50%";
+   }
+   firstE1.addEventListener("mouseout", ()=>{
+      firstE1.style.backgroundColor = "cyan";
+      firstE1.style.borderRadius="";
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비동기 요청 테스트</title>
+<script>
+window.onload = function() {
+	var btnEl = document.querySelector("[type='button']");
+	var divEl = document.getElementById("result");
+	btnEl.onclick = function(event){
+		var result = "some text";
+		// 비동기 요청을 포함
+		divEl.textContent = result;
+		ajax.open("GET", "result.jsp");
+		ajax.send(null);
+		divEl.textContent = result;
+	}
+	ajax.onreadystatechange = function(event){
+		console.log(ajax.readyState);
+		if(ajax.readyState == 4){
+			console.log("서버에서 응답함");
+			divEl.textContent = ajax.responseText;
+		}
+	}
+	setTimeout(function() {
+		//document.write("setTimeout 실행됨");
+		divEl.textContent = "setTimeout 실행됨";
+	},3000);
+	setInterval(() => {
+		divEl.textContent = divEl.textContent + ".";
+	}, 1000);
+}
+//setInterval: 정해진 시간마다 반복해서 콜백함수를 실행
+//setTimeout: 정해진 시간후 콜백함수를 실행
+</script>
+</head>
+<body>
+<input type="button" value="비동기요청">
+<div id="result"></div>
+</body>
+</html>

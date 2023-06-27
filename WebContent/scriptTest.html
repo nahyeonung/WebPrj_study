@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link>
+<style type="text/css"></style>
+<script>
+var name = window.prompt("이름을 입력하세요.");
+document.write("<h1>" + name + "</h1>");
+console.log(name);
+memberName = "홍길동";
+if(name != "나현웅"){
+	alert("주인이 아닙니다. 물어버립니다.");
+}else{
+	alert("환영합니다.");
+}
+function test(a, b=10){
+	let t1 = 20;
+	console.log(a+b);
+	console.log(memberName);
+	t2 = 300;
+}
+test(a=10, b=20);
+test = 30;
+console.log(test);
+var a= 40;
+console.log(t2);
+
+</script>
+</head>
+<body>
+<input type="button" value="HELLO">
+<script>
+var btn = document.querySelector("input");
+btn.onclick = function() {
+	console.log("hello");
+}
+</script>
+</body>
+</html>

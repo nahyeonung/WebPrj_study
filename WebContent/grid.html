@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.grid-container {
+	background-color:blue;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 150px;
+}
+.grid-container > div {
+	background-color: yellow;
+	height:100px;
+	padding: 20px; margin: 10px;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+</div>
+</body>
+</html>
